@@ -35,13 +35,50 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 15px;
+    overflow-y: auto;
 }
 
 .project{
-    /* height: 150px; */
     display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 10px;
     border-radius: 10px;
     background-color: #f8fafc;
+    overflow: hidden;
+    gap: 5px;
+    padding-left: 5px;
+}
+
+/* .project-title{
+    border: solid black;
+} */
+
+.project-title p{
+    margin:5px;
+    align-self: center;
+}
+
+.tab{
+    grid-row: 1 / 4;
+    grid-column-start: 2;
+    background-color: #020617;
+}
+.project-image-container{
+    background-color: #0f172a;
+    border-radius: 5px;
+}
+
+.icons-container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5px;
+    /* border: solid black; */
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
 }
 
 #info-container{
