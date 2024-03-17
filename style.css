@@ -31,11 +31,14 @@ body{
     padding: 15px;
 }
 
+#projects-window{
+    overflow-y: auto;
+}
+
 #projects{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 15px;
-    overflow-y: auto;
 }
 
 .project{

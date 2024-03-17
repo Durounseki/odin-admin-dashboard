@@ -1,6 +1,8 @@
-const gitIcon = document.querySelector("#github-page");
-const gitURL = "https://github.com/Durounseki/odin-landing-page"
-gitIcon.addEventListener('click',() => {
-    const newWindow = window.open(gitURL,'_blank');
-    newWindow.opener = nul;
-} );
+const Icons = document.querySelectorAll(".icon");
+Icons.forEach(icon => {
+    icon.addEventListener('click',() => {
+        const redirectURL=icon.dataset.url;
+        const newWindow = window.open(redirectURL,'_blank');
+        newWindow.opener = nul;
+    })
+});
