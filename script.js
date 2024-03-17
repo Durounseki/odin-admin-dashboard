@@ -6,3 +6,7 @@ Icons.forEach(icon => {
         newWindow.opener = nul;
     })
 });
+
+//Animate progress bar
+const progressBars = document.querySelectorAll(".progress");
+progressBars.forEach(bar => bar.style.width = bar.dataset.progress+'%');

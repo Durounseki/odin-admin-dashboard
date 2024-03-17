@@ -1,3 +1,4 @@
+/* Single page, no scroll */
 body{
     height: 100vh;
     margin: 0;
@@ -55,6 +56,7 @@ body{
     gap: 10px;
 }
 
+/* Handle line spacing with the grid row size */
 .page p{
     margin: 0;
 }
@@ -69,6 +71,7 @@ body{
     align-items: center;
     gap: 10px;
 }
+
 
 #header{
     display: grid;
@@ -91,6 +94,7 @@ body{
     height: 20px;
     width: min(400px,80%);
     border-radius: 10px;
+    padding: 0 10px;
     background-color: #cbd5e1;
     border: none;
 }
@@ -116,7 +120,7 @@ body{
 
 #greeting p{
     font-size: 12px;
-    margin-top: 0;
+    margin: 0;
 }
 
 #greeting h1{
@@ -147,6 +151,7 @@ body{
     border-radius: 50%;
 }
 
+/* A slightly larger avatar image */
 #user-avatar{
     width: 60px;
     height: 60px;
@@ -167,6 +172,7 @@ body{
     font-weight: 600;
 }
 
+/* Hide overflown objects and allow vertical scrolling  */
 #projects-window{
     overflow-y: auto;
 }
@@ -186,16 +192,16 @@ body{
     background-color: #f8fafc;
     overflow: hidden;
     gap: 5px;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
-/* .project-title{
-    border: solid black;
-} */
+.project-title{
+    display: flex;
+    align-items: end;
+}
 
 .project-title p{
-    margin:5px;
-    align-self: center;
+    margin: 0;
 }
 
 .tab{
@@ -203,9 +209,11 @@ body{
     grid-column-start: 2;
     background-color: #020617;
 }
+
 .project-image-container{
     background-color: #0f172a;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 .icons-container{
@@ -213,7 +221,7 @@ body{
     justify-content: right;
     align-items: center;
     gap: 5px;
-    /* border: solid black; */
+    margin-right: 10px;
 }
 
 .icon{
@@ -275,4 +283,31 @@ body{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+/* Animation of progress bar */
+
+.skill{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.progress-bar{
+    background-color: #cbd5e1;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.progress{
+    background-color: #334155;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    /*Set initial width to 0% and animate any change to the width over 3s, smoothly*/
+    width: 0%;
+    transition: width 3s ease-in-out;
 }
